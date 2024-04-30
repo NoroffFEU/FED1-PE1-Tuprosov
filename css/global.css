@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Source serif pro';
+    src: local('Source'), local('source-serif-pro.regular'),
+        url('../assets/fonts/source-serif-pro.regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans Regular';
+    src: local('Work Sans'), local('Work Sans-Regular'),
+        url('../assets/fonts/WorkSans-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans Semibold';
+    src: local('Work Sans'), local('Work Sans-SemiBold'),
+        url('../assets/fonts/WorkSans-SemiBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font-family: Work Sans Regular;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+h1,h2,h3,p 
+{
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+  
+
+img {
+    max-width: 100%;
+}
+
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.grid {
+    display: -ms-grid;
+    display: grid;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.btn-reset {
+    padding: 0;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 80px;
+}
