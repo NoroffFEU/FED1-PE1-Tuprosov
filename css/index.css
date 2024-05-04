@@ -1,0 +1,148 @@
+/* banner */
+.hero {
+    margin-bottom: 280px;
+}
+
+.position {
+    position: relative;
+}
+
+.carousel-wrapper {
+    margin: 0 auto;
+    max-width: 1216px;
+    overflow: hidden;
+}
+
+
+.sliding-transition {
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+.slide-content {
+    position: absolute;
+    bottom: -220px;
+    left: 200px;
+    width: 35%;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.details {
+    margin-bottom: 25px;
+    align-items: center;
+    gap: 20px;
+    color: #97989F;
+}
+
+.tag {
+    padding: 10px 15px;
+    display: inline-block;
+    margin-bottom: 15px;
+    background-color: #4B6BFB;
+    color: white;
+    border-radius: 6px;
+}
+
+.slide-content h1 {
+    margin-bottom: 25px;
+    font-size: 36px;
+}
+
+.slide-content a {
+    display: inline-block;
+    padding: 10px;
+    background-color: #4B6BFB;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+}
+
+.prev-button {
+   left: 30px;
+}
+
+.next-button {
+    right: -10px;
+}
+
+.prev-button img,
+.next-button img {
+    width: 50px;
+}
+
+.prev-button,
+.next-button {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    opacity: 1;
+}
+
+
+/* ads */
+
+.sample {
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    max-width: 750px;
+    background-color: #E8E8EA;
+    border-radius: 12px;
+}
+
+/* articles */
+
+.blog-list {
+    margin-bottom: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    align-items: center;
+    gap: 30px;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #E8E8EA;
+    border-radius: 12px;
+}
+
+.card-link {
+    display: inline-block;
+}
+
+.card-image {
+    width: 100%;
+}
+
+.article-title {
+    max-width: 300px;
+}
+
+.info {
+    align-items: center;
+}
+
+.view-btn {
+    margin: 0 auto;
+    max-width: fit-content;
+    padding: 12px 30px;
+    text-align: center;
+    border: 1px solid #696A75;
+    border-radius: 6px;
+    cursor: pointer;
+}
