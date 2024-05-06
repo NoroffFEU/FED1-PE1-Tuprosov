@@ -6,13 +6,14 @@
     <title>Edit posts</title>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/edit.css">
 </head>
 <body>
     <div class="container">
         <header class="header flex">
             <div class="header__left">
-                <a class="header__logo logo">
-                    <img src="../assets/images/logo_blue.png" alt="HotViewLabs logo">
+                <a class="header__logo logo" href="../index.html">
+                    <img src="/assets/images/logo_blue.png" alt="HotViewLabs logo">
                 </a>
             </div>
             <div class="header__mid">
@@ -22,13 +23,13 @@
                             <a href="../index.html">Home</a>
                         </li>
                         <li class="header__item">
-                            <a href="exhibitons.html">Videos</a>
+                            <a href="#">Videos</a>
                         </li>
                         <li class="header__item">
-                            <a href="visit.html">Account</a>
+                            <a href="../account/login.html">Account</a>
                         </li>
                         <li class="header__item">
-                            <a href="contact.html">Contacts</a>
+                            <a href="#">Contacts</a>
                         </li>
                     </ul>
                 </nav>
@@ -45,6 +46,34 @@
             </div>
         </header>
     </div>
+    <main class="main">
+        <div class="container">
+            <h1 class="main-title">Manage your posts</h1>
+            <p class="post-id">Post ID:</p>
+            <form class="edit-form flex" method="post" enctype="multipart/form-data">
+                <label for="post_title">Title:</label>
+                <textarea type="text" id="post_title" name="post_title" required></textarea>
+                
+                <label for="post_body">Body content:</label>
+                <textarea id="post_body" name="post_body" required></textarea>
+                
+                <label for="post_tags">Create minimum one tag:</label>
+                <input type="text" id="post_tags" name="post_tags">
+                
+                <label for="post_description"> Brief headline:</label>
+                <textarea id="post_description" name="post_description" required></textarea>
+                
+                <label for="video_upload">Video Upload:</label>
+                <input type="file" id="video_upload" name="video_upload">
+                
+                <label for="image_upload">Image Upload:</label>
+                <input type="file" id="image_upload" name="image_upload">
+                
+                <button class="btn-reset" id="submit" type="submit">Save</button>
+                <button class="btn-reset" id="delete" type="submit">Delete this post</button>
+            </form>
+        </div>
+    </main>
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
