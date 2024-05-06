@@ -1,0 +1,124 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container-login {
+    min-width: 320px;
+    height: 100%;
+    gap: 50px;
+}
+
+.logo {
+    margin-top: 50px;
+}
+
+.image-section, .form-section {
+    align-items: center;
+    padding: 20px;
+}
+
+.image-section {
+    align-self: stretch;
+    flex: 1;
+    background: url("../assets/images/login-banner.jpg") center / cover;
+}
+
+.form-section {
+    flex: 1;
+    background-color: #fff; /* Set a background color for the form section */
+}
+
+img {
+    max-height: 100%;
+}
+
+form {
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+    max-width: 500px; /* Limit the width of the form */
+}
+
+form h1 {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+form p {
+    color: #67728A;
+}
+
+.paragraph, .login-link {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 20px;
+    background-color: #7388E6;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.google {
+    width: 100%;
+    background: url("../assets/images/google_shape.png") 20px no-repeat;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #7388E6;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.login-link a:hover,
+.google:hover p {
+    text-decoration: underline;
+}
+
+@media (max-width: 1350px) {
+    .container-login {
+        gap: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .form-section {
+        align-items: flex-start;
+        align-self: stretch;
+        justify-content: center;
+    }
+
+}

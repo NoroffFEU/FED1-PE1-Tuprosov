@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in to your account</title>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-    
+    <div class="container-login flex">
+        <div class="image-section">
+        </div>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../assets/images/logo_blue.png" alt="logo" id="logo"/>
+            </a>
+        </div>
+        <div class="form-section flex">
+            <!-- Form on the right half -->
+            <form class="flex" action="#" method="POST">
+                <h1>Sign in</h1>
+                <p>Enter your email and password to login to your account.</p>
+                <div class="form-group">
+                    <input type="text" id="username" name="username" autocomplete="username" placeholder="Email address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" autocomplete="current-password" placeholder="Password" required>
+                </div>
+                <button type="submit">Sign in</button>
+                <div class="paragraph">
+                    <p>Or</p>
+                </div>
+                <div class="google flex" role="button">
+                    <p>Continue with Google</p>
+                </div>
+                <div class="login-link">
+                    <a href="login.html">
+                        Want to create an account? Sign up
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
