@@ -95,6 +95,10 @@ h3 {
     margin: 0 auto;
 }
 
+.nodisplay {
+    display: none
+}
+
 /* header */
 
 .header {

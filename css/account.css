@@ -110,10 +110,6 @@ button:hover {
     text-decoration: underline;
 }
 
-.nodisplay {
-    display: none
-}
-
 @media (max-width: 1350px) {
     .container-login {
         gap: 100px;
