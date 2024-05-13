@@ -1,0 +1,27 @@
+.container-main {
+    max-width: 800px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+.post-title {
+    margin-bottom: 80px;
+}
+
+.details,
+.post-img,
+.post-text,
+.paragraph-title {
+    margin-bottom: 50px;
+    justify-content: space-between;
+}
+
+.details-info,
+.details-edit {
+    gap: 20px;
+    align-items: center;
+}
+
+.main-text {
+    line-height: 30px;
+}
