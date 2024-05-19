@@ -6,8 +6,7 @@
     <title>Register new account</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/account.css">
-    <script src="../js/validateEmail.js" defer></script>
-    <script src="../js/register.js" defer></script>
+    <script type="module" src="../js/register.mjs"></script>
 </head>
 <body>
     <div class="container-login flex">
@@ -27,7 +26,7 @@
                     <input type="name" id="name" name="name" placeholder="Name" pattern="^[a-zA-Z]{0,15}$" title="Name can't contain special charaters or numbers" required>
                 </div>
                 <div class="form-group">
-                    <p class="error-message nodisplay">Email should end with '@stud.noroff.no'</p>
+                    <p class="error-message-email nodisplay">Email should end with '@stud.noroff.no'</p>
                     <input type="email" id="email" name="email" autocomplete="email" placeholder="Email address" required>
                 </div>
                 <div class="form-group">

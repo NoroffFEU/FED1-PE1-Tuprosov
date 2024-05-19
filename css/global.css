@@ -96,7 +96,7 @@ h3 {
 }
 
 .nodisplay {
-    display: none
+    opacity: 0;
 }
 
 /* header */
@@ -108,8 +108,16 @@ h3 {
     color: #1E43E8;
 }
 
+.header__right {
+    gap: 20px;
+}
+
 .header__item:not(:last-child) {
     margin-right: 40px;
+}
+
+#postEdit {
+    display: none;
 }
 
 .header__form {
@@ -137,6 +145,11 @@ h3 {
     width: 50px;
     background-color: #E8E8EA;
     border-radius: 100px;
+}
+
+.account {
+    gap: 10px;
+    align-items: center;
 }
 
 .switcher {

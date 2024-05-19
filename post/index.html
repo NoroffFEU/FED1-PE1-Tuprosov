@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/postIndex.css">
-    <script rel="stylesheet" src="../js/postEdit.js" defer></script>
+    <script src="../js/checkAccess.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -32,6 +32,9 @@
                         <li class="header__item">
                             <a href="../account/login.html">Account</a>
                         </li>
+                        <li class="header__item" id="postEdit">
+                            <a href="/post/edit.html">Add post</a>
+                        </li>
                         <li class="header__item">
                             <a href="contact.html">Contacts</a>
                         </li>
@@ -39,6 +42,9 @@
                 </nav>
             </div>
             <div class="header__right flex">
+                <div class="account nodisplay flex">
+                    <img src="/assets/images/author-image.jpg" alt="account photo">
+                </div>
                 <form class="header__form flex" action="">
                     <label for="search"></label>
                     <input type="text" id="search" placeholder="Search">

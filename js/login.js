@@ -22,11 +22,11 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
             }
             
             // Redirect user to home page
-            window.location.href = '../post/index.html';
+            window.location.href = '../index.html';
         } else {
             // Login failed
             const message = document.querySelector('.error-message-login');
-            message.style.display = 'block';
+            message.classList.remove('nodisplay');
         }
     } catch (error) {
         console.error('Error:', error);
