@@ -30,7 +30,6 @@ export function initializeSlider() {
     nextButton.addEventListener('click', () => {
         carousel.classList.add("sliding-transition");
         prevIndex = currentIndex;
-        console.log(currentIndex)
         currentIndex = (currentIndex + 1) % totalSlides;
         carousel.style.transform = `translateX(-${slideWidth}px)`;
 
@@ -44,39 +43,3 @@ export function initializeSlider() {
     });
 }
 
-// export function slider() {
-//     const carousel = document.querySelector('.carousel');
-//     const slides = document.querySelectorAll('.slide');
-//     const prev = document.querySelector('.prev');
-//     const next = document.querySelector('.next');
-
-//     let currentSlide = 0;
-
-//     const goToSlide = (index) => {
-//     slides.forEach((slide, i) => {
-//         slide.style.transform = `translateX(${100 * (i - index)}%)`;
-//     });
-//     currentSlide = index;
-//     };
-
-//     const nextSlide = () => {
-//     if (currentSlide === slides.length - 1) {
-//         goToSlide(0);
-//     } else {
-//         goToSlide(currentSlide + 1);
-//     }
-//     };
-
-//     const prevSlide = () => {
-//     if (currentSlide === 0) {
-//         goToSlide(slides.length - 1);
-//     } else {
-//         goToSlide(currentSlide - 1);
-//     }
-//     };
-
-//     next.addEventListener('click', nextSlide);
-//     prev.addEventListener('click', prevSlide);
-
-//     goToSlide(currentSlide);
-// }

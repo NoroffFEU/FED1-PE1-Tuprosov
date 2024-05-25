@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/edit.css">
     <script src="../js/checkAccess.js" defer></script>
+    <script type="module" src="../js/edit.mjs" ></script>
 </head>
 <body>
     <div class="container">
@@ -56,25 +57,24 @@
     <main class="main">
         <div class="container">
             <h1 class="main-title">Manage your posts</h1>
-            <p class="post-id">Post ID:</p>
             <form class="edit-form flex" method="post" enctype="multipart/form-data">
                 <label for="post_title">Title:</label>
-                <textarea type="text" id="post_title" name="post_title" required></textarea>
+                <textarea type="text" id="post_title" name="title" required></textarea>
                 
                 <label for="post_body">Body content:</label>
-                <textarea id="post_body" name="post_body" required></textarea>
+                <textarea id="post_body" name="body" required></textarea>
                 
                 <label for="post_tags">Create minimum one tag:</label>
-                <input type="text" id="post_tags" name="post_tags">
+                <input type="text" id="post_tags" name="tags">
                 
                 <label for="post_description"> Brief headline:</label>
-                <textarea id="post_description" name="post_description" required></textarea>
+                <textarea id="post_description" name="description" required></textarea>
                 
-                <label for="video_upload">Video Upload:</label>
-                <input type="file" id="video_upload" name="video_upload">
+                <label for="video_link">Video URL:</label>
+                <input type="text" id="video_link" name="video">
                 
-                <label for="image_upload">Image Upload:</label>
-                <input type="file" id="image_upload" name="image_upload">
+                <label for="image_link">Image URL:</label>
+                <input type="text" id="image_link" name="image">
                 
                 <button class="btn-reset" id="submit" type="submit">Save</button>
                 <button class="btn-reset" id="delete" type="submit">Delete this post</button>
