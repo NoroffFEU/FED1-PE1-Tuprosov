@@ -5,13 +5,13 @@ export function transferPostID(){
     elements.forEach(element => {
         element.addEventListener('click', ()=> {
             const id = element.getAttribute('id');
-            window.location.href = `/post/index.html?id=${id}&page=${window.location.pathname}`;
+            window.location.href = `./post/index.html?id=${id}&page=${window.location.pathname}`;
         })
     })
 
     readMore.addEventListener('click', (event) => {
         event.preventDefault()
         const activeSlideID = document.querySelector('.active').getAttribute('id')
-        window.location.href = `/post/index.html?id=${activeSlideID}&page=${window.location.pathname}`;
+        window.location.href = `./post/index.html?id=${activeSlideID}&page=${window.location.pathname}`;
     })
 }
