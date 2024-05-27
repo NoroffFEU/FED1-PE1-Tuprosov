@@ -1,3 +1,6 @@
+import { populateBannerCard } from "./posts/constants.mjs";
+import { transferPostID } from "./transferID.mjs";
+
 export function initializeSlider() {
     const carousel = document.querySelector('.banner-carousel');
     const prevButton = document.querySelector('.prev-button');
@@ -13,8 +16,12 @@ export function initializeSlider() {
     prevButton.addEventListener('click', () => {
         prevIndex = currentIndex;
         currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        let slideID = slides[currentIndex].getAttribute('id')
+        slides[currentIndex].classList.add('active')
+        slides[prevIndex].classList.remove('active')
         carousel.style.transform = `translateX(-${slideWidth}px)`;
         carousel.insertBefore(slides[currentIndex], carousel.firstChild);
+        populateBannerCard(slideID)
 
         setTimeout(() => {
             carousel.classList.add("sliding-transition");
@@ -31,7 +38,11 @@ export function initializeSlider() {
         carousel.classList.add("sliding-transition");
         prevIndex = currentIndex;
         currentIndex = (currentIndex + 1) % totalSlides;
+        let slideID = slides[currentIndex].getAttribute('id')
+        slides[currentIndex].classList.add('active')
+        slides[prevIndex].classList.remove('active')
         carousel.style.transform = `translateX(-${slideWidth}px)`;
+        populateBannerCard(slideID)
 
         setTimeout(() => {
             carousel.appendChild(slides[prevIndex]);

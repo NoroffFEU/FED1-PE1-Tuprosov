@@ -68,7 +68,7 @@
                 <input type="text" id="post_tags" name="tags">
                 
                 <label for="post_description"> Brief headline:</label>
-                <textarea id="post_description" name="description" required></textarea>
+                <textarea id="post_description" name="description"></textarea>
                 
                 <label for="video_link">Video URL:</label>
                 <input type="text" id="video_link" name="video">
@@ -76,8 +76,8 @@
                 <label for="image_link">Image URL:</label>
                 <input type="text" id="image_link" name="image">
                 
-                <button class="btn-reset" id="submit" type="submit">Save</button>
-                <button class="btn-reset" id="delete" type="submit">Delete this post</button>
+                <button class="btn-reset" id="submit" type="submit" name="action" value="save">Save</button>
+                <button class="btn-reset" id="delete" type="submit" name="action" value="delete">Delete</button>
             </form>
         </div>
     </main>

@@ -5,7 +5,7 @@ function checkAccessToken() {
     const userDataString = localStorage.getItem('userData');
     const userData = userDataString ? JSON.parse(userDataString) : null;
     const token = userData && userData.data && userData.data.accessToken ? userData.data.accessToken : false;
-    const name = userData.data.name;
+    const name = token ? userData.data.name : null;
 
     if (token) {
         if(editBtn){

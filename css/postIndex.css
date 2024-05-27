@@ -16,6 +16,10 @@
     justify-content: space-between;
 }
 
+.post-img img {
+    border-radius: 10px;
+}
+
 .details-info,
 .details-edit {
     gap: 20px;

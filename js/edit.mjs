@@ -1,36 +1,43 @@
-import { create } from "./posts/create.mjs";
-
-// if exists, retrieve id of the post
-const parameterString = window.location.search;
-const searchParameters = new URLSearchParams(parameterString);
-const postId = searchParameters.get('id');
+import { create, remove } from "./posts/index.mjs";
+const postId = localStorage.getItem('targetID'); 
 
 // if new post, get all the form data and send to api;
-document.querySelector('.edit-form').addEventListener('submit', function(event) {
+const form = document.querySelector('.edit-form');
+form.setAttribute('id', postId);
+
+form.addEventListener('submit', function(event) {
     event.preventDefault();
-    const form = event.target;
-    const formData = new FormData(form);
-    create(formData);
+    const formData = new FormData(event.target);
+    const id = form.getAttribute('id', postId);
+    const clickedBtn = event.submitter;
+    const action = clickedBtn.value
+    
+    
+    if (action === 'save') {
+        create(formData, id);
+    } else if (action === 'delete') {
+        remove(id);
+    }
+    ;
 })
 
-// get the post to fill up the form fields
-let post
+// get target ID and post from local storage
+let targetPost
 if (postId) {
-    const posts = JSON.parse(localStorage.getItem('Allposts'));
-    post = posts[postId];
+    const posts = JSON.parse(localStorage.getItem('AllPosts')) || JSON.parse(localStorage.getItem('Posts12'));
+    targetPost = posts.data.find(post => post.id === postId);
 }
-
+// get the post to fill up the form fields
 function populateForm(post) {
     document.getElementById('post_title').value = post.title;
     document.getElementById('post_body').value = post.body;
-    document.getElementById('post_tag').value = post.tag;
-    document.getElementById('post_description').value = post.description;
-    document.getElementById('image_link').value = post.imageLink;
-    document.getElementById('video_link').value = post.videoLink;
+    document.getElementById('post_tags').value = post.tags.join(',');
+    document.getElementById('image_link').value = post.media.url;
 }
 
-if (post){
-    populateForm(post) 
+if (targetPost){
+    populateForm(targetPost) 
 }
+
 
     

@@ -1,10 +1,8 @@
 import { ApiBase } from "./constants.mjs";
 import { header } from "./authFetch.mjs";
 
-export async function create(postData) {
-    const postId = postData.get('id');
-    const name = JSON.parse(localStorage.getItem('userData')).data.name;
-    const url = postId ? `${ApiBase}/${name}/${postId}` : `${ApiBase}/${name}`;
+export async function create(postData , postId) {
+    const url = postId ? `${ApiBase}/${postId}` : `${ApiBase}`;
     const method = postId ? 'put' : 'post';
     const tags = postData.get('tags') ? postData.get('tags').split(',') : [];
 
@@ -27,6 +25,7 @@ export async function create(postData) {
     }
     
     try {
+        console.log(method)
         const response = await fetch(url, {
             method,
             headers: header(),
@@ -39,7 +38,12 @@ export async function create(postData) {
         }
 
         const data = await response.json();
-        console.log('Success:', data);
+        if (method === 'put'){
+            alert('Success! The post has been updated');
+        } else {
+            alert('Success! A new post has been created');
+        }
+        
     } catch (error) {
         console.error('Error:', error);
     }

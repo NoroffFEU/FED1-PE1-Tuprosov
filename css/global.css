@@ -96,7 +96,7 @@ h3 {
 }
 
 .nodisplay {
-    opacity: 0;
+    display: none;
 }
 
 /* header */

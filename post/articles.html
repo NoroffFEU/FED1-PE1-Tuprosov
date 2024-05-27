@@ -6,9 +6,10 @@
     <title>View articles</title>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/articles.css">
-    <script type="module" src="../js/index.js"></script>
     <script src="../js/checkAccess.js" defer></script>
+    <script type="module" src="../js/articles.mjs"></script>
 </head>
 <body>
     <div class="container">
@@ -53,6 +54,37 @@
                 </div>
             </div>
         </header>
+        <h1 class="main-title">ALL ARTICLES</h1>
+        <main class="main-content">
+            <div class="controls">
+                <div class="select-container flex">
+                    <div class="filter">
+                        <label for="tagFilter">Filter</label>
+                        <select id="tagFilter">
+                            <option value="none">None</option>
+                            <option value="Blockchain">Blockchain</option>
+                            <option value="VR">VR</option>
+                            <option value="Biometrics">Biometrics</option>
+                            <option value="Dev">Dev</option>
+                            <option value="Tech">Tech</option>
+                            <option value="AI">AI</option>
+                            <option value="Cybersecurity">Cybersecurity</option>
+                            <option value="Web Dev">Web Dev</option>
+                        </select>
+                    </div>
+                    <div class="sort">
+                        <label for="sortBy">Sort</label>
+                        <select id="sortBy">
+                            <option value="none">None</option>
+                            <option value="date">Sort by Date</option>
+                            <option value="author">Sort by Author</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <ul class="list-reset blog-list grid">
+            </ul>
+        </main>
     </div>
     <footer class="footer">
         <div class="container">
