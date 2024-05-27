@@ -5,7 +5,7 @@ export function transferPostID(){
     elements.forEach(element => {
         element.addEventListener('click', ()=> {
             const id = element.getAttribute('id');
-            window.location.href = `./post/index.html?id=${id}&page=${window.location.pathname}`;
+            window.location.href = `/post/index.html?id=${id}&page=${window.location.pathname}`;
         })
     })
 
