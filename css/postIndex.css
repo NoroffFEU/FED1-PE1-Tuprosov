@@ -26,6 +26,12 @@
     align-items: center;
 }
 
+.share {
+    padding: 10px 15px;
+    background-color: #4B6BFB;
+    border-radius: 6px;
+}
+
 .main-text {
     line-height: 30px;
 }
