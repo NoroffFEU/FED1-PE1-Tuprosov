@@ -6,7 +6,7 @@ export function transferPostID(){
         element.addEventListener('click', ()=> {
             const id = element.getAttribute('id');
             if (window.location.pathname === '/index.html') {
-                window.location.href = `./post/index.html?id=${id}&page=${window.location.pathname}`;
+                window.location.href = `/post/index.html?id=${id}&page=${window.location.pathname}`;
             } else if(window.location.pathname === '/articles.html') {
                 window.location.href = `../post/index.html?id=${id}&page=${window.location.pathname}`;
             }
