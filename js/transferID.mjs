@@ -9,7 +9,7 @@ export function transferPostID(){
             if (window.location.pathname === '/index.html'){
                 window.location.href = `post/index.html?id=${id}&page=${window.location.pathname}`;
             } else if (window.location.pathname === '/articles.html') {
-                window.location.href = `./post/index.html?id=${id}&page=${window.location.pathname}`;
+                window.location.href = `index.html?id=${id}&page=${window.location.pathname}`;
             }
         }) 
     })
