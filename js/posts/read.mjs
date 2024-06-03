@@ -5,7 +5,7 @@ export async function get() {
     let params;
     let isAllPosts = true;
 
-    if (window.location.pathname === `${repo}/index.html`) {
+    if (window.location.pathname === repo) {
         params = {
             limit: 12,
             sortOrder: 'desc'   
