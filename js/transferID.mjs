@@ -6,9 +6,9 @@ export function transferPostID(){
         element.addEventListener('click', (event)=> {
             event.preventDefault();
             const id = element.getAttribute('id');
-            if (window.location.pathname === '/index.html'){
+            if (window.location.pathname === '/'){
                 window.location.href = `post/index.html?id=${id}&page=${window.location.pathname}`;
-            } else if (window.location.pathname === '/articles.html') {
+            } else if (window.location.pathname === '/post/articles.html') {
                 window.location.href = `index.html?id=${id}&page=${window.location.pathname}`;
             }
         }) 
