@@ -1,3 +1,4 @@
+import { repo } from "./posts/constants.mjs";
 export function transferPostID(){
     const elements = document.querySelectorAll('.blog-item');
     const readMore = document.querySelector('.readMore');
@@ -6,7 +7,7 @@ export function transferPostID(){
         element.addEventListener('click', (event)=> {
             event.preventDefault();
             const id = element.getAttribute('id');
-            if (window.location.pathname === '/'){
+            if (window.location.pathname === `${repo}/` || window.location.pathname === `${repo}/index.html` || window.location.pathname === '/' || window.location.pathname === '/index.html'){
                 window.location.href = `post/index.html?id=${id}&page=${window.location.pathname}`;
             } else if (window.location.pathname === '/post/articles.html') {
                 window.location.href = `index.html?id=${id}&page=${window.location.pathname}`;
