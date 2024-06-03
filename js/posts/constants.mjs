@@ -1,4 +1,5 @@
 export const ApiBase = 'https://v2.api.noroff.dev/blog/posts/shahzod';
+export const repo = 'FED1-PE1-Tuprosov';
 
 function cardTemplate(post) {
     // Create elements

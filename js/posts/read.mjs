@@ -1,11 +1,11 @@
-import { ApiBase } from "./constants.mjs";
+import { ApiBase, repo } from "./constants.mjs";
 export async function get() {
 
     const api = `${ApiBase}`
     let params;
     let isAllPosts = true;
 
-    if (window.location.pathname === '/index.html') {
+    if (window.location.pathname === `${repo}/index.html`) {
         params = {
             limit: 12,
             sortOrder: 'desc'   
