@@ -1,4 +1,4 @@
-import { singlePostTemplate, getTargetID, addPost } from "./posts/constants.mjs";
+import { singlePostTemplate, getTargetID } from "./posts/constants.mjs";
 
 function displayTargetPost(id, page) {
     const postContainer = document.querySelector('.container-main');
@@ -10,5 +10,5 @@ function displayTargetPost(id, page) {
 const [postId, page] = getTargetID();
 localStorage.setItem('targetID', postId)
 displayTargetPost(postId, page)
-addPost();
+
 

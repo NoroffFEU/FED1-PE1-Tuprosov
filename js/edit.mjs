@@ -1,5 +1,4 @@
 import { create, remove } from "./posts/index.mjs";
-import { addPost } from "./posts/constants.mjs";
 const postId = localStorage.getItem('targetID'); 
 
 // if new post, get all the form data and send to api;
@@ -39,8 +38,6 @@ function populateForm(post) {
 if (targetPost){
     populateForm(targetPost) 
 }
-
-addPost();
 
 
     
