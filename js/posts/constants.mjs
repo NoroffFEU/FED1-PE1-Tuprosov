@@ -169,7 +169,11 @@ export function populateBannerCard(ID) {
 export function addPost() {
    const addPostbtn = document.getElementById('postEdit');
     addPostbtn.addEventListener('click', () => {
-        if (window.location.pathname === `${repo}/` || window.location.pathname === `${repo}/index.html` || window.location.pathname === '/' || window.location.pathname === '/index.html'){
+        if (window.location.pathname === `${repo}/` || window.location.pathname === `${repo}/index.html` || window.location.pathname === '/' || window.location.pathname === '/index.html' 
+        || window.location.pathname === `${repo}/post/index.html` || window.location.pathname === 'post/index.html' 
+        || window.location.pathname === `${repo}/post/articles.html` || window.location.pathname === 'post/articles.html' 
+        || || window.location.pathname === `${repo}/post/edit.html` || window.location.pathname === 'post/edit.html' )
+        {
             localStorage.removeItem('targetID');
         } 
     })
