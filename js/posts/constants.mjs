@@ -57,7 +57,7 @@ export function populateParent(posts, parent){
 
 export function singlePostTemplate (postId, page) {
     let posts;
-    if (window.location.pathname === `${repo}/` || window.location.pathname === `${repo}/index.html` || window.location.pathname === '/' || window.location.pathname === '/index.html'){
+    if (window.location.pathname === `${repo}/post/index.html` || window.location.pathname === 'post/index.html'){
         posts = JSON.parse(localStorage.getItem('Posts12'));
     } else {
         posts = JSON.parse(localStorage.getItem('AllPosts'));
