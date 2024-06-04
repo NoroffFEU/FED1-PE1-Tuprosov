@@ -166,6 +166,15 @@ export function populateBannerCard(ID) {
     date.textContent = targetPost.updated.substr(0, 10);
 }
 
+export function addPost() {
+   const addPostbtn = document.getElementById('postEdit');
+    addPostbtn.addEventListener('click', () => {
+        if (window.location.pathname === `${repo}/` || window.location.pathname === `${repo}/index.html` || window.location.pathname === '/' || window.location.pathname === '/index.html'){
+            localStorage.removeItem('targetID');
+        } 
+    })
+}
+
 
 
 

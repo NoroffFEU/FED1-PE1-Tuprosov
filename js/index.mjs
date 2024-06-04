@@ -1,6 +1,6 @@
 import { initializeSlider } from "./carousel.mjs";
 import { get } from "./posts/index.mjs";
-import { populateParent, populateBanner, populateBannerCard } from "./posts/constants.mjs";
+import { populateParent, populateBanner, populateBannerCard, addPost } from "./posts/constants.mjs";
 import { transferPostID } from "./transferID.mjs";
 
 initializeSlider();
@@ -12,3 +12,4 @@ populateBanner(posts);
 // to load banner card content when page loads
 const slideID = document.querySelector('.slide').getAttribute('id');
 populateBannerCard(slideID)
+addPost();
