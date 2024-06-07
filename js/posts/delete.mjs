@@ -22,8 +22,7 @@ export async function remove(id) {
             throw new Error(`Failed to delete post with ID ${id}`);
         }
 
-        const result = await response.json();
-        console.log(`Post with ID ${id} has been deleted`, result);
+        alert(`Post with ID ${id} has been deleted`, result);
 
         return result;
     } catch (error) {
